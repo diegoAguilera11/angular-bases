@@ -1,0 +1,36 @@
+
+<dl>
+    <td class="text-black font-semibold">Nombre:</td>
+    <dd class="font-bold text-xl"> {{ name }} </dd>
+
+    <td class="text-black font-semibold">Edad:</td>
+    <dd class="font-bold text-xl"> {{ age }} </dd>
+
+    <td>Método:</td>
+    <dd class="font-bold text-xl"> {{ getHeroDescription() }} </dd>
+
+    <td>Capitalizado:</td>
+    <dd class="font-bold text-xl"> {{ capitalizedName }} </dd>
+
+    <button
+        *ngIf="name !== 'SpiderMan'"
+        (click)="changeHero()"
+        class="p-3 bg-red-500 rounded text-white font-semibold mx-2">
+      Cambiar nombre
+    </button>
+
+    <button
+      *ngIf="age !== 24"
+      (click)="changeAge()"
+      class="p-3 bg-cyan-500 rounded text-white font-semibold mx-2"
+    >
+      Cambiar edad
+    </button>
+
+    <button
+      (click)="resetForm()"
+      class="p-3 bg-yellow-500 rounded text-white font-semibold mx-2"
+    >
+      Reset Form
+    </button>
+</dl>
